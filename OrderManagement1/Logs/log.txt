@@ -1,0 +1,181 @@
+﻿2023-04-12 14:27:17.810 +05:30 [Information] Get: api/Products
+2023-04-12 14:28:30.047 +05:30 [Error] Get: api/Products
+2023-04-12 14:30:23.862 +05:30 [Error] Get: api/Products
+2023-04-12 14:32:29.393 +05:30 [Error] Get: api/Products
+2023-04-12 14:38:08.188 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 14:38:08.498 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 293.917ms
+2023-04-12 14:38:08.538 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 14:39:59.302 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 14:39:59.659 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 338.5054ms
+2023-04-12 14:39:59.702 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 14:44:56.844 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 14:44:57.156 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 294.4254ms
+2023-04-12 14:44:57.198 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 14:47:17.627 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 14:47:17.995 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 349.1626ms
+2023-04-12 14:47:18.049 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 14:49:09.648 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 14:49:10.002 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 336.7162ms
+2023-04-12 14:49:10.047 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 14:52:10.947 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 14:52:11.266 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 299.031ms
+2023-04-12 14:52:11.307 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 15:01:19.000 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 15:01:19.303 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 289.8108ms
+2023-04-12 15:01:19.305 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 15:01:50.984 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 15:01:51.290 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 291.5015ms
+2023-04-12 15:01:51.291 +05:30 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'OrderManagement1.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-12 15:08:48.629 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 15:08:48.926 +05:30 [Information] Executing action method "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" - Validation state: Valid
+2023-04-12 15:08:48.928 +05:30 [Error] Get: api/Products
+2023-04-12 15:08:49.106 +05:30 [Information] Entity Framework Core "2.1.14-servicing-32113" initialized '"OrderManagement81363Context"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2023-04-12 15:08:49.413 +05:30 [Information] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductId], [p].[CategoryId], [p].[ProductName], [p].[ProductPrice], [p.Category].[CategoryId], [p.Category].[CategoryDescription], [p.Category].[CategoryName]
+FROM [Products] AS [p]
+LEFT JOIN [Category] AS [p.Category] ON [p].[CategoryId] = [p.Category].[CategoryId]"
+2023-04-12 15:08:49.506 +05:30 [Information] Executed action method "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 577.9212ms.
+2023-04-12 15:08:49.514 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[OrderManagement1.Dto.GetProductsDto, OrderManagement1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-04-12 15:08:49.525 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 882.6008ms
+2023-04-12 15:17:20.298 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 15:17:20.608 +05:30 [Information] Executing action method "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" - Validation state: Valid
+2023-04-12 15:17:20.610 +05:30 [Information] Get: api/Products
+2023-04-12 15:17:20.799 +05:30 [Information] Entity Framework Core "2.1.14-servicing-32113" initialized '"OrderManagement81363Context"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2023-04-12 15:17:21.176 +05:30 [Information] Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductId], [p].[CategoryId], [p].[ProductName], [p].[ProductPrice], [p.Category].[CategoryId], [p.Category].[CategoryDescription], [p.Category].[CategoryName]
+FROM [Products] AS [p]
+LEFT JOIN [Category] AS [p.Category] ON [p].[CategoryId] = [p.Category].[CategoryId]"
+2023-04-12 15:17:21.276 +05:30 [Information] Executed action method "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 665.6576ms.
+2023-04-12 15:17:21.285 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[OrderManagement1.Dto.GetProductsDto, OrderManagement1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-04-12 15:17:21.296 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 984.8801ms
+2023-04-12 15:20:17.135 +05:30 [Information] Route matched with "{action = \"GetProducts\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProducts()" on controller "OrderManagement1.Controllers.ProductsController" ("OrderManagement1").
+2023-04-12 15:20:17.447 +05:30 [Information] Executing action method "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" - Validation state: Valid
+2023-04-12 15:20:17.450 +05:30 [Information] Get: api/Products
+2023-04-12 15:20:17.632 +05:30 [Information] Entity Framework Core "2.1.14-servicing-32113" initialized '"OrderManagement81363Context"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2023-04-12 15:20:17.936 +05:30 [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[ProductId], [p].[CategoryId], [p].[ProductName], [p].[ProductPrice], [p.Category].[CategoryId], [p.Category].[CategoryDescription], [p.Category].[CategoryName]
+FROM [Products] AS [p]
+LEFT JOIN [Category] AS [p.Category] ON [p].[CategoryId] = [p.Category].[CategoryId]"
+2023-04-12 15:20:18.033 +05:30 [Information] Executed action method "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 581.7076ms.
+2023-04-12 15:20:18.042 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[OrderManagement1.Dto.GetProductsDto, OrderManagement1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-04-12 15:20:18.054 +05:30 [Information] Executed action "OrderManagement1.Controllers.ProductsController.GetProducts (OrderManagement1)" in 903.8974ms
