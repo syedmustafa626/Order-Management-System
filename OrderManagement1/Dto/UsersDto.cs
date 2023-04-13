@@ -12,7 +12,7 @@ namespace OrderManagement1.Dto
         public int UserId { get; set; }
         public string UserFname { get; set; }
         public string UserLname { get; set; }
-        public string UserType { get; set; }
+        public string[] Roles { get; set; }
         public string UserContact { get; set; }
         public string UserCity { get; set; }
         public int PinCode { get; set; }

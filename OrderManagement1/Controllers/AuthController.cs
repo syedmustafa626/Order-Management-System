@@ -27,33 +27,60 @@ namespace OrderManagement1.Controllers
         [HttpPost]
         [Route("Register")]
         
-        public async Task<IActionResult> Register([FromBody] RegisterRequestDto registerRequestDto)
+        //public async Task<IActionResult> Register([FromBody] RegisterRequestDto registerRequestDto)
+        //{
+        //    var identityUser = new IdentityUser
+        //    {
+        //        UserName = registerRequestDto.UserName,
+        //        Email = registerRequestDto.UserName
+        //    };
+
+        //    var identityResult = await userManager.CreateAsync(identityUser, registerRequestDto.Password);
+
+        //    if (identityResult.Succeeded)
+        //    {
+        //        //Add roles to this user
+        //        if(registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
+        //        {
+        //            identityResult= await userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
+
+        //            if (identityResult.Succeeded)
+        //            {
+        //                return Ok("User was Registered! Please Login..");
+        //            }
+        //        }
+                
+        //    }
+        //    return BadRequest("Something went Wrong!!!");
+        //}
+
+        public async Task<IActionResult> Register([FromBody] UsersDto userDto)
         {
             var identityUser = new IdentityUser
             {
-                UserName = registerRequestDto.UserName,
-                Email = registerRequestDto.UserName
+                UserName = userDto.UserEmail,
+                Email = userDto.UserEmail
             };
 
-            var identityResult = await userManager.CreateAsync(identityUser, registerRequestDto.Password);
+            var identityResult = await userManager.CreateAsync(identityUser, userDto.UserPassword);
 
             if (identityResult.Succeeded)
             {
                 //Add roles to this user
-                if(registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
+                if (userDto.Roles != null && userDto.Roles.Any())
                 {
-                    identityResult= await userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
+                    identityResult = await userManager.AddToRolesAsync(identityUser, userDto.Roles);
 
                     if (identityResult.Succeeded)
                     {
                         return Ok("User was Registered! Please Login..");
                     }
                 }
-                
+
             }
             return BadRequest("Something went Wrong!!!");
         }
-          
+
         //POST: /api/Auth/Login
         [HttpPost]
         [Route("Login")]
