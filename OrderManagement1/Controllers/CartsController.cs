@@ -116,7 +116,7 @@ namespace OrderManagement1.Controllers
 
         // DELETE: api/Carts/5
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Writer, Reader")]
+        [Authorize(Roles = "Writer")]
         public async Task<IActionResult> DeleteCart([FromRoute] int id)
         {
             if (!ModelState.IsValid)

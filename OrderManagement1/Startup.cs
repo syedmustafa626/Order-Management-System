@@ -55,7 +55,7 @@ namespace OrderManagement1
 
             //Auth Db Context
             services.AddDbContext<OrderManagementAuthDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("OrderAuthStr")));
+            options.UseSqlServer(Configuration.GetConnectionString("OrderStr")));
 
             services.AddScoped<ITokenRepository, TokenRepository>();
 

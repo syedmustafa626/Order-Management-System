@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using OrderManagement1.Data;
 using OrderManagement1.Dto;
+using OrderManagement1.Models;
 using OrderManagement1.Repositories;
 
 namespace OrderManagement1.Controllers
@@ -16,11 +19,15 @@ namespace OrderManagement1.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly ITokenRepository tokenRepository;
+        private readonly OrderManagement81363Context dbcontext;
+        private readonly IMapper mapper;
 
-        public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository)
+        public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository, OrderManagement81363Context dbcontext,IMapper mapper)
         {
             this.userManager = userManager;
             this.tokenRepository = tokenRepository;
+            this.dbcontext = dbcontext;
+            this.mapper = mapper;
         }
 
         //POST: /api/Auth/Register
@@ -63,6 +70,7 @@ namespace OrderManagement1.Controllers
             };
 
             var identityResult = await userManager.CreateAsync(identityUser, userDto.UserPassword);
+            var user = mapper.Map<Users>(userDto);
 
             if (identityResult.Succeeded)
             {
@@ -70,9 +78,13 @@ namespace OrderManagement1.Controllers
                 if (userDto.Roles != null && userDto.Roles.Any())
                 {
                     identityResult = await userManager.AddToRolesAsync(identityUser, userDto.Roles);
+                    user.Roles = userDto.Roles[0];
+                    await dbcontext.Users.AddAsync(user);
+
 
                     if (identityResult.Succeeded)
                     {
+                        await dbcontext.SaveChangesAsync();
                         return Ok("User was Registered! Please Login..");
                     }
                 }
