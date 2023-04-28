@@ -88,22 +88,40 @@ namespace OrderManagement1
             });
 
 
-            services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1", new APIInfo
+            //services.AddSwaggerGen(options =>
+            //{
+            //    options.SwaggerDoc("v1", new APIInfo
+            //    {
+            //        Title = "Order Management System",
+            //        Version = "V1.0",
+            //        Description = "Order Management System developed by Mustafa",
+            //        Contact = new APIInfo
+            //        {
+            //            Name = "Syed Mustafa",
+            //            Email = string.Empty,
+            //            Url = new Uri("http://localhost:4200"),
+            //        },
+            //    });                
+            //});         
+
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Info { Title = "Order Management System", Version = "v1" });
+                c.AddSecurityDefinition("Bearer",
+                new ApiKeyScheme
                 {
-                    Title = "Order Management System",
-                    Version = "V1.0",
-                    Description = "Order Management System developed by Mustafa",
-                    Contact = new APIInfo
-                    {
-                        Name = "Syed Mustafa",
-                        Email = string.Empty,
-                        Url = new Uri("http://localhost:4200"),
-                    },
-                });                
-            });         
-       
+                    In = "header",
+                    Description = "Please enter into field the word 'Bearer' following by space and JWT",
+                    Name = "Authorization",
+                    Type = "apiKey"
+                });
+                c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>> {
+                { "Bearer", Enumerable.Empty<string>() },
+                 });
+
+
+
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -123,6 +141,9 @@ namespace OrderManagement1
             
             app.UseAuthentication();
             //app.UseAuthorization();
+
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
             app.UseMvc();           
 
             app.UseSwagger();
@@ -132,7 +153,9 @@ namespace OrderManagement1
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Order Management System");
             });
 
-            app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
+            
+
+            //app.UseHttpsRedirection();
 
         }
     }    

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,7 @@ namespace OrderManagement1.Controllers
 
         // GET: api/CartItems
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetCartItems()
         {
             //GET data from database-Domain models
@@ -102,7 +104,7 @@ namespace OrderManagement1.Controllers
 
             var cartItems = mapper.Map<CartItems>(cartItemsDto);
             await _context.CartItems.AddAsync(cartItems);
-            var cartItemsDto1 = mapper.Map<CartDto>(cartItems);
+            var cartItemsDto1 = mapper.Map<CartItemsDto>(cartItems);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCartItems", new { id = cartItems.CartItemsId }, cartItems);

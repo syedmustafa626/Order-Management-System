@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OrderManagement1.Dto;
@@ -17,11 +18,15 @@ namespace OrderManagement1.Controllers
     {
         private readonly OrderManagement81363Context _context;
         private readonly IMapper mapper;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public UsersController(OrderManagement81363Context context, IMapper mapper)
+        public UsersController(OrderManagement81363Context context, IMapper mapper, UserManager<IdentityUser> userManager)
         {
+            
+      
             _context = context;
             this.mapper = mapper;
+            this.userManager = userManager;
         }
 
         // GET: api/Users
@@ -91,21 +96,88 @@ namespace OrderManagement1.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        //// POST: api/Users
+        //[HttpPost]
+        //public async Task<IActionResult> PostUsers([FromBody] UsersDto usersDto)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+
+        //    var users = mapper.Map<Users>(usersDto);
+        //    await _context.Users.AddAsync(users);
+        //    var usersDto1 = mapper.Map<UsersDto>(users);
+        //    await _context.SaveChangesAsync();
+
+        //    return CreatedAtAction("GetUsers", new { id = users.UserId }, users);
+        //}
+
+
+
+
         [HttpPost]
-        public async Task<IActionResult> PostUsers([FromBody] UsersDto usersDto)
+
+        //[Route("Register")]
+
+        //public async Task<IActionResult> Register([FromBody] RegisterRequestDto registerRequestDto)
+        //{
+        //    var identityUser = new IdentityUser
+        //    {
+        //        UserName = registerRequestDto.UserName,
+        //        Email = registerRequestDto.UserName
+        //    };
+
+        //    var identityResult = await userManager.CreateAsync(identityUser, registerRequestDto.Password);
+
+        //    if (identityResult.Succeeded)
+        //    {
+        //        //Add roles to this user
+        //        if(registerRequestDto.Roles != null && registerRequestDto.Roles.Any())
+        //        {
+        //            identityResult= await userManager.AddToRolesAsync(identityUser, registerRequestDto.Roles);
+
+        //            if (identityResult.Succeeded)
+        //            {
+        //                return Ok("User was Registered! Please Login..");
+        //            }
+        //        }
+
+        //    }
+        //    return BadRequest("Something went Wrong!!!");
+        //}
+
+        public async Task<IActionResult> Register([FromBody] UsersDto userDto)
         {
-            if (!ModelState.IsValid)
+            var identityUser = new IdentityUser
             {
-                return BadRequest(ModelState);
+                UserName = userDto.UserEmail,
+                Email = userDto.UserEmail
+            };
+
+            var identityResult = await userManager.CreateAsync(identityUser, userDto.UserPassword);
+            var user = mapper.Map<Users>(userDto);
+
+            if (identityResult.Succeeded)
+            {
+                //Add roles to this user
+                if (userDto.Roles != null && userDto.Roles.Any())
+                {
+                    identityResult = await userManager.AddToRolesAsync(identityUser, userDto.Roles);
+                    user.Roles = userDto.Roles[0];
+                    await _context.Users.AddAsync(user);
+
+
+                    if (identityResult.Succeeded)
+                    {
+                        await _context.SaveChangesAsync();
+                        return CreatedAtAction("GetUsers", new { id = user.UserId }, user);
+                        //return CreatedAtRoute("User was Registered! Please Login..");
+                    }
+                }
+
             }
-
-            var users = mapper.Map<Users>(usersDto);
-            await _context.Users.AddAsync(users);
-            var usersDto1 = mapper.Map<UsersDto>(users);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetUsers", new { id = users.UserId }, users);
+            return BadRequest("Something went Wrong!!!");
         }
 
         // DELETE: api/Users/5

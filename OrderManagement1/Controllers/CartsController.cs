@@ -28,7 +28,7 @@ namespace OrderManagement1.Controllers
 
         // GET: api/Carts
         [HttpGet]
-        [Authorize(Roles ="Reader")]
+        //[Authorize(Roles ="Reader")]
         public async Task<IActionResult> GetCart()
         {
             //GET data from database-Domain models
@@ -40,7 +40,7 @@ namespace OrderManagement1.Controllers
 
         // GET: api/Carts/5
         [HttpGet("{id}")]
-        [Authorize(Roles = "Reader")]
+        //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetCart([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -60,7 +60,7 @@ namespace OrderManagement1.Controllers
 
         // PUT: api/Carts/5
         [HttpPut("{id}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> PutCart([FromRoute] int id, [FromBody] CartDto cartDto)
         {
             var cart = mapper.Map<Cart>(cartDto);
@@ -98,7 +98,7 @@ namespace OrderManagement1.Controllers
 
         // POST: api/Carts
         [HttpPost]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> PostCart([FromBody] CartDto cartDto)
         {
             if (!ModelState.IsValid)
@@ -116,7 +116,7 @@ namespace OrderManagement1.Controllers
 
         // DELETE: api/Carts/5
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> DeleteCart([FromRoute] int id)
         {
             if (!ModelState.IsValid)
