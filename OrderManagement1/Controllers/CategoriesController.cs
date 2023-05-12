@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace OrderManagement1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly OrderManagement81363Context _context;
@@ -26,6 +28,7 @@ namespace OrderManagement1.Controllers
 
         // GET: api/Categories
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetCategory()
         {
             //GET data from database-Domain models

@@ -9,7 +9,7 @@ namespace OrderManagement1.Dto
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-        //public int? CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public double ProductPrice { get; set; }
 
         public CategoryDto Category { get; set; }

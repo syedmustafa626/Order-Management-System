@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ namespace OrderManagement1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly OrderManagement81363Context _context;
@@ -30,7 +32,7 @@ namespace OrderManagement1.Controllers
 
         // GET: api/Products
         [HttpGet]
-
+        //[Authorize]
         public async Task<IActionResult> GetProducts()
         {
 
@@ -53,6 +55,7 @@ namespace OrderManagement1.Controllers
 
         // GET: api/Products/5
         [HttpGet("{id}")]
+        
         public async Task<IActionResult> GetProducts([FromRoute] int id)
         {
             if (!ModelState.IsValid)

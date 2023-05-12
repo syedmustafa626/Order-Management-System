@@ -8,7 +8,7 @@ namespace OrderManagement1.Dto
     public class GetShippingDto
     {
         public int ShippingId { get; set; }
-        //public int? OrderId { get; set; }
+        public int? OrderId { get; set; }
         public DateTime ShippingDate { get; set; }
         public string ShippingCompany { get; set; }
         public string ShippingCity { get; set; }

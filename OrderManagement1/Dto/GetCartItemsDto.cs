@@ -8,8 +8,8 @@ namespace OrderManagement1.Dto
     public class GetCartItemsDto
     {
         public int CartItemsId { get; set; }
-        //public int? CartId { get; set; }
-        //public int? ProductId { get; set; }
+        public int? CartId { get; set; }
+        public int? ProductId { get; set; }
         public double ProductPrice { get; set; }
         public int? ProductQty { get; set; }
         

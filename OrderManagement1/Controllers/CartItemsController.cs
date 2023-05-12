@@ -14,6 +14,7 @@ namespace OrderManagement1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CartItemsController : ControllerBase
     {
         private readonly OrderManagement81363Context _context;
@@ -27,7 +28,6 @@ namespace OrderManagement1.Controllers
 
         // GET: api/CartItems
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetCartItems()
         {
             //GET data from database-Domain models

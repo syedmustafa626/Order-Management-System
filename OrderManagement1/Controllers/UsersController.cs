@@ -172,7 +172,7 @@ namespace OrderManagement1.Controllers
                     {
                         await _context.SaveChangesAsync();
                         return CreatedAtAction("GetUsers", new { id = user.UserId }, user);
-                        //return CreatedAtRoute("User was Registered! Please Login..");
+                        //return Ok("User was Registered! Please Login..");
                     }
                 }
 
