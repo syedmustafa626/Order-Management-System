@@ -16,7 +16,7 @@ namespace OrderManagement1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class ProductsController : ControllerBase
     {
         private readonly OrderManagement81363Context _context;
@@ -112,6 +112,8 @@ namespace OrderManagement1.Controllers
 
         // POST: api/Products
         [HttpPost]
+
+        [Authorize(Roles ="Writer")]
         public async Task<IActionResult> PostProducts([FromBody]  ProductsDto productsDto)
         {
             if (ModelState.IsValid)
